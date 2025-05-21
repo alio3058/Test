@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networx - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/Logo-_Favicon_cropped.png">
+</head>
+<body>
+    <header>
+        <img src="img/Logo-full_cropped.png" alt="Networx Logo" width="200">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="create-account.html">Create Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="img/Logo-full_cropped.png" alt="Networx Logo" class="hero-image">
+            <div class="hero-text">
+                <h2>Welcome to Networx</h2>
+                <p>Your trusted partner for cutting-edge network solutions. We provide reliable and scalable networking infrastructure for businesses of all sizes.</p>
+                <a href="products.html" class="cta-button">Explore Our Products</a>
+            </div>
+        </section>
+
+        <section class="about-preview">
+            <h3>About Us</h3>
+            <p>Learn more about our mission and values. We are dedicated to providing the best networking services in the industry.</p>
+            <a href="about.html" class="learn-more">Learn More</a>
+        </section>
+
+        <section class="contact-preview">
+            <h3>Get in Touch</h3>
+            <p>Have questions? Contact us today to discuss your networking needs.</p>
+            <a href="contact.html" class="contact-link">Contact Us</a>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(text => {
+                let oldelem = document.querySelector("div#footer");
+                let newelem = document.createElement("div");
+                newelem.innerHTML = text;
+                oldelem.parentNode.replaceChild(newelem, oldelem);
+            });
+    </script>
+</body>
+</html>

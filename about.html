@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networx - About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/Logo-_Favicon_cropped.png">
+</head>
+<body>
+    <header>
+        <img src="img/Logo-full_cropped.png" alt="Networx Logo" width="200">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="create-account.html">Create Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>About Networx</h2>
+        <section class="company-info">
+            <img src="images/about-us.jpg" alt="About Us Image" class="about-image">
+            <div class="about-text">
+                <h3>Our Mission</h3>
+                <p>At Networx, our mission is to empower businesses with robust and reliable networking solutions that drive growth and innovation. We are committed to providing exceptional service and support to our clients.</p>
+
+                <h3>Our History</h3>
+                <p>Founded in 2010, Networx has grown from a small startup to a leading provider of networking infrastructure. We have a proven track record of delivering high-quality solutions to a diverse range of clients.</p>
+
+                <h3>Our Team</h3>
+                <p>Our team of experienced professionals is dedicated to staying at the forefront of networking technology. We work collaboratively to design, implement, and support solutions that meet the unique needs of each client.</p>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(text => {
+                let oldelem = document.querySelector("div#footer");
+                let newelem = document.createElement("div");
+                newelem.innerHTML = text;
+                oldelem.parentNode.replaceChild(newelem, oldelem);
+            });
+    </script>
+</body>
+</html>
